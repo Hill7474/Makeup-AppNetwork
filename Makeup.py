@@ -1,4 +1,3 @@
-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
 import AI
 import facial_recognition
 
