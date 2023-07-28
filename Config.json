@@ -1,0 +1,12 @@
+{
+  "name": "My Makeup AppNetwork App",
+  "version": "1.0.0",
+  "description": "My Makeup AppNetwork app is a great tool to show makeup tutorials based on specific skin tones and connect with others around the world.",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.3.0"
+  }
+}
