@@ -1,7 +1,7 @@
 
 from chatterbot import ChatBot
 
-chatbot = ChatBot("Chatpot")
+chatbot = ChatBot("ChatBot")
 
 exit_conditions = (":q", "quit", "exit")
 while True:
@@ -9,4 +9,4 @@ while True:
     if query in exit_conditions:
         break
     else:
-        print(f"🪴 {chatbot.get_response(query)}")
+        print(f"🪴 {ChatBot.get_response(query)}")
