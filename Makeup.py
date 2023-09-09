@@ -13,9 +13,9 @@ import facial_recognition
 def makeup_bot():
     #Get facial recognition of person
     face_data = facial_recognition.get_data()
-
+    face_shape = facial_recognition.get_data
     #Use AI to analyze face data
-    skin_type = AI.analyze(face_data)
+    skin_tone = AI.analyze(face_data)
 
-    #Show person how to use makeup based on skin type
-    makeup_tutorials = AI.generate_tutorials(skin_type)
+    #Show person how to use makeup based on skin tone and facial shape.
+    makeup_tutorials = AI.generate_tutorials(skin_tone)
