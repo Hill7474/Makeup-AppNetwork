@@ -6,7 +6,7 @@ face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 # default webcam
 stream = cv2.VideoCapture(0)
 
-while(True):
+while True:
     # Capture frame-by-frame
     (grabbed, frame) = stream.read()
 
@@ -15,18 +15,18 @@ while(True):
 
     # Try to detect faces in the webcam
     faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5)
-    
+
+    stroke = 5
     # for each faces found
-    for (x, y, w, h) in faces:        
+    for (x, y, w, h) in faces:    
         # Draw a rectangle around the face
         color = (0, 255, 255) # in BGR
-        stroke = 5    
         cv2.rectangle(frame, (x, y), (x + w, y + h), 
             color, stroke)
 
     # Show the frame
     cv2.imshow("Image", frame)
-    key = cv2.waitKey(1) & 0xFF    
+    key = cv2.waitKey(1) & 0xFF
     if key == ord("q"):    # Press q to break out of the loop
         break
 
