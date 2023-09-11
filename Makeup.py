@@ -3,7 +3,7 @@ import facial_recognition
 
 def makeup_bot():
     triggered = True
-    if triggered == True:
+    if triggered:
         face = facial_recognition.detect_face()
         skin_type = AI.analyze_skin_type(face)
       # Makeup Bot Code
