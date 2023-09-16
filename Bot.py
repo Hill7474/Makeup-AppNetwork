@@ -1,4 +1,3 @@
-
 from chatterbot import ChatBot
 
 chatbot = ChatBot("ChatBot")
@@ -9,4 +8,8 @@ while True:
     if query in exit_conditions:
         break
     else:
-        print(f"🪴 {ChatBot.get_response(query)}")
+        try:
+            response = chatbot.get_response(query)
+            print(f"🪴 {response}")
+        except Exception as e:
+            print(f"An error occurred: {e}")
